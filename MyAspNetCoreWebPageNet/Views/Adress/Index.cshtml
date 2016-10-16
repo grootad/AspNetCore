@@ -27,9 +27,7 @@
 @foreach (var item in Model)
 {
          <tr>
-            <td>
-               @Html.DisplayFor(modelItem => item.VoorNaam)
-            </td>
+            <td asp-for="@item.VoorNaam"/>
            <td>
                 @Html.DisplayFor(modelItem => item.AchterNaam)
             </td>

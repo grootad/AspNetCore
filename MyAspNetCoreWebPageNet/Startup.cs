@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using MyTagHelpers;
 
 namespace MyAspNetCoreWebPageNet
 {
@@ -29,6 +31,7 @@ namespace MyAspNetCoreWebPageNet
     {
       // Add framework services.
       services.AddMvc();
+      services.AddTransient<IHtmlGenerator, MyHtmlGenerator>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
