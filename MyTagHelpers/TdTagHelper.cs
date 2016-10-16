@@ -14,16 +14,16 @@ namespace MyTagHelpers
   {
     private const string ForAttributeName = "asp-for";
 
-    public TdTagHelper(IHtmlGenerator generator)
+    public TdTagHelper(IMyHtmlGenerator generator)
     {
       Generator = generator;
     }
 
     [HtmlAttributeNotBound]
     [ViewContext]
-    public ViewContext Viewcontext { get; set; }
+    public ViewContext ViewContext { get; set; }
 
-    protected IHtmlGenerator Generator { get; }
+    protected IMyHtmlGenerator Generator { get; }
 
     [HtmlAttributeName(ForAttributeName)]
     public ModelExpression For { get; set; }
@@ -40,7 +40,7 @@ namespace MyTagHelpers
         throw new ArgumentNullException(nameof(output));
       }
 
-      //var tagBuilder = Generator.Gena
+      var tagBuilder = Generator.GenerateTd(ViewContext, For.ModelExplorer, For.Model, For.Metadata.DisplayFormatString, htmlAttributes: null );
 
       base.Process(context, output);
     }

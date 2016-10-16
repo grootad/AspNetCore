@@ -31,7 +31,7 @@ namespace MyAspNetCoreWebPageNet
     {
       // Add framework services.
       services.AddMvc();
-      services.AddTransient<IHtmlGenerator, MyHtmlGenerator>();
+      services.AddTransient<IMyHtmlGenerator, MyHtmlGenerator>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +56,7 @@ namespace MyAspNetCoreWebPageNet
       {
         routes.MapRoute(
                   name: "default",
-                  template: "{controller=Home}/{action=Index}/{id?}");
+                  template: "{controller=Adress}/{action=Index}/{id?}");
       });
     }
   }
