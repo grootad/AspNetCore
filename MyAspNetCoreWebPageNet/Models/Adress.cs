@@ -11,13 +11,13 @@ namespace MyAspNetCoreWebPageNet.Models
     {
       return new List<Adress>
             {
-            new Adress {VoorNaam = "Tamara", AchterNaam = "Groot", Straat = "Bisschopskroft 5", Plaats = "Egmond", InvoerDatum = DateTime.Now - TimeSpan.FromDays(10) },
-            new Adress {VoorNaam = "Mariska", AchterNaam = "Groot", Straat = "Bisschopskroft 5", Plaats = "Egmond", InvoerDatum = DateTime.Now} };
+            new Adress {VoorNaam = "Theo", AchterNaam = "Boer", Straat = "Slinger", Plaats = "Alkmaar", InvoerDatum = DateTime.Now - TimeSpan.FromDays(10) },
+            new Adress {VoorNaam = "Tineke", AchterNaam = "Lub", Straat = "Baan 23", Plaats = "Maastricht", InvoerDatum = DateTime.Now} };
     }
 
     public static Adress Single()
     {
-      return new Adress { VoorNaam = "Tamara", AchterNaam = "Groot", Straat = "Bisschopskroft 5", Plaats = "Egmond" };
+      return new Adress { VoorNaam = "Theo", AchterNaam = "Boer", Straat = "Slinger", Plaats = "Alkmaar" };
     }
 
   }
